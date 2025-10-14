@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kamau's Online Shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Kamau's Online Shop</h1>
+    </header>
+    <main>
+        <!-- Registration Form -->
+        <section id="registration-section">
+            <h2>Register</h2>
+            <form id="registration-form">
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Register</button>
+            </form>
+        </section>
+
+        <!-- Shop Section (hidden before registration) -->
+        <section id="shop-section" style="display:none;">
+            <h2>Shop Items</h2>
+            <div id="shop-items"></div>
+            <h3>Your Cart</h3>
+            <ul id="cart-list"></ul>
+            <div id="cart-total"></div>
+            <button id="checkout-btn" style="display:none;">Checkout</button>
+        </section>
+
+        <!-- Checkout Section (hidden initially) -->
+        <section id="checkout-section" style="display:none;">
+            <h2>Checkout</h2>
+            <form id="checkout-form">
+                <label>
+                    Select Payment Method:
+                    <select id="payment-method">
+                        <option value="mpesa">M-Pesa</option>
+                        <!-- You could add more methods here -->
+                    </select>
+                </label>
+                <input type="text" id="mpesa-number" placeholder="M-Pesa Phone Number" required>
+                <button type="submit">Pay Now</button>
+            </form>
+            <div id="checkout-message"></div>
+        </section>
+    </main>
+    <footer>
+        &copy; 2025 Kamau's Shop
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
